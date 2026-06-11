@@ -22,7 +22,7 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           HF_USER: "Ginetik"
-          SPACE_NAME: "-iris-api-sheverev"
+          SPACE_NAME: "iris-api-sheverev"
         run: |
           git config --global user.email "bot@github.actions"
           git config --global user.name "GitHub CD Bot"
@@ -35,10 +35,8 @@ jobs:
           cp Dockerfile space_repo/Dockerfile
           
 
-          find space_repo -name "mlflow.db" -type f -
-          delete
-          find space_repo -name "__pycache__" -type d -
-          exec rm -rf {} +
+          find space_repo -name "mlflow.db" -type f -delete
+          find space_repo -name "__pycache__" -type d -exec rm -rf {} +
           
 
           cd space_repo
