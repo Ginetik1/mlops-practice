@@ -10,3 +10,5 @@ __pycache__/
 /models/*
 !/data/.keep
 !/models/.keep
+mlruns/
+mlflow.db
