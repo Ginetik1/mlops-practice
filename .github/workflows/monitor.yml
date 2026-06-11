@@ -14,7 +14,7 @@ jobs:
       - name: Check Health Endpoint
       # ЗАМЕНИТЕ URL на прямую ссылку вашего спейса!
         run: |
-          curl --fail https://huggingface.co/spaces/Ginetik/iris-api-sheverev/health
+          curl --fail https://ginetik-iris-api-sheverev.hf.space/health
       - name: Create Issue on Failure
         if: failure()
         env:
